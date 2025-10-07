@@ -51,7 +51,6 @@ public class VerificaciónDeAñoBisiesto {
         } else {
             System.out.println("El año " + anioBisiesto + " no es bisiesto.");
         }
-
         
     } //cierre de main
     
