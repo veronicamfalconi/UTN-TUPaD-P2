@@ -35,13 +35,13 @@ public class ClasificaciónDeEdad {
         edadIngresada = Integer.parseInt(input.nextLine());
         
         if (edadIngresada < 12) {
-            System.out.println("Niño");
+            System.out.println("Eres un niño");
         } else if (edadIngresada <= 17) {
-            System.out.println("Adolescente");
+            System.out.println("Eres un adolescente");
         } else if (edadIngresada <=59) {
-            System.out.println("Adulto");
+            System.out.println("Eres un adulto");
         } else {
-            System.out.println("Adulto mayor");
+            System.out.println("Eres un adulto mayor");
         }
     } //cierre del main
     
