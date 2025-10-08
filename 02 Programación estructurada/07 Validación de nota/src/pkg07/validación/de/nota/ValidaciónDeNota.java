@@ -29,11 +29,13 @@ public class ValidaciónDeNota {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int notaIngresada;
+        
         System.out.println("Ingrese una nota (0-10): ");
-        notaIngresada = Integer.parseInt(input.nextLine());
-        do {            
-            System.out.println("Error: Nota inválida. Ingrese una nota entre 0 y 10.");
+        do {
             notaIngresada = Integer.parseInt(input.nextLine());
+            if (notaIngresada > 10 || notaIngresada < 0){
+                System.out.println("Error: Nota inválida. Ingrese una nota entre 0 y 10.");
+            }
         } while (notaIngresada > 10 || notaIngresada < 0 );
         System.out.println("Nota guardada");
     } //cierre del main
