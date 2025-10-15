@@ -48,7 +48,7 @@ public class ImpresionRecursivaDeArrays {
             opcion = Integer.parseInt(input.nextLine());
             switch (opcion) {
                 case 1:
-                    mostrarArray(precios);
+                    mostrarArray(precios, 0);
                     break;
                 case 2:
                     System.out.println("Ingrese el número del producto a modificar (del 1 al 5): ");
@@ -62,7 +62,7 @@ public class ImpresionRecursivaDeArrays {
                     }
                     break;
                 case 3:
-                    mostrarArray(precios2);
+                    mostrarArray(precios2, 0);
                 case 0:
                     System.out.println("Saliendo del programa...");
                     break;
@@ -73,11 +73,12 @@ public class ImpresionRecursivaDeArrays {
         } while (opcion != 0);
     } //cierre del main
     
-    public static void mostrarArray(double[] array) {
-        for (int i = 0; i < array.length; i++) {
-            double elemento = array[i];
-            System.out.println(elemento + " ");
+    public static void mostrarArray(double[] array, int indice) {
+        if (indice == array.length) {
+            return;
         }
+        System.out.println("Producto " + (indice + 1) + ": $" + array[indice]);
+        mostrarArray(array, indice+1);
     }
     
 } //cierre de clase
